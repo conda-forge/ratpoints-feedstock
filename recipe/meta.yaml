@@ -15,16 +15,16 @@ source:
     - patches/sturm_and_rp_private.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - toolchain
     - libtool
-    - gmp
+    - gmp >=5.0.1,<7
   run:
-    - gmp
+    - gmp >=5.0.1,<7
 
 test:
   commands:
