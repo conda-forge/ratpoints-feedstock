@@ -8,6 +8,7 @@ export CCFLAGS="-L$PREFIX/lib -lgmp -lm $LDFLAGS"
 export INSTALL_DIR="$PREFIX"
 
 sed -i.bak 's/${CC} gen_init_sieve_h.c/${CC_FOR_BUILD} gen_init_sieve_h.c/g' Makefile
+sed -i.bak 's/${CC} gen_find_points_h.c/${CC_FOR_BUILD} gen_find_points_h.c/g' Makefile
 
 make -e libratpoints.a
 make -e test
